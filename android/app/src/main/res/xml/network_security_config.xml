@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!--
+        lk.msal.ru:3443 и mail.msal.ru используют самоподписанный сертификат.
+        Основной обход выполнен на стороне Dart (IOHttpClientAdapter.badCertificateCallback
+        в auth_service.dart).
+    -->
+    <domain-config cleartextTrafficPermitted="false">
+        <domain includeSubdomains="true">lk.msal.ru</domain>
+        <domain includeSubdomains="true">mail.msal.ru</domain>
+        <trust-anchors>
+            <certificates src="system"/>
+        </trust-anchors>
+    </domain-config>
+    <base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <certificates src="system"/>
+        </trust-anchors>
+    </base-config>
+</network-security-config>
