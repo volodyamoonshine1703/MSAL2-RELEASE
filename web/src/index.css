@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Базовые стили для тёмной темы */
+:root {
+  --color-primary: #1f5a56;
+  --color-secondary: #036495;
+  --color-accent: #6aaab0;
+  --color-dark: #3b362e;
+  --color-bg: #f4f7f6;
+  --color-card: #ffffff;
+  --color-border: #f3f4f6;
+  --color-text-muted: #6b7280;
+}
+
+.dark {
+  --color-primary: #6aaab0;
+  --color-secondary: #4fa3d1;
+  --color-accent: #1f5a56;
+  --color-dark: #f4f7f6;
+  --color-bg: #1e1b18;
+  --color-card: #2a2622;
+  --color-border: #3d3731;
+  --color-text-muted: #a39c94;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Утилиты для безопасных зон iOS */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 16px);
+}
+
+.pt-safe {
+  padding-top: env(safe-area-inset-top);
+}
+
+/* Скрытие скроллбара */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

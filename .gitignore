@@ -1,7 +1,56 @@
-```markdown
-# Documentation files (if generated)
-BACKEND_DOCUMENTATION.md
-PAGE_STRUCTURE.md
-ROUTING_ARCHITECTURE.md
-SECURITY_IMPLEMENTATION_PLAN.md
+```
+# Dependencies
+node_modules/
+
+# Build artifacts
+dist/
+build/
+.webpack/
+.rollup.cache/
+
+# Environment variables
+.env
+.env.local
+*.env.*
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+
+# Coverage reports
+coverage/
+htmlcov/
+*.coverage
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# Rust/Cargo (if applicable)
+target/
+
+# Gradle (if applicable)
+.gradle/
+
+# MyPy cache (if applicable)
+.mypy_cache/
+
+# Pytest cache (if applicable)
+.pytest_cache/
 ```
